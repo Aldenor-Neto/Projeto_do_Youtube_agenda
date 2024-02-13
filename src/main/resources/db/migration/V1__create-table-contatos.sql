@@ -1,0 +1,1 @@
+CREATE TABLE contatos( id SERIAL PRIMARY KEY, nome VARCHAR(100), email VARCHAR(50), telefone VARCHAR(30));
