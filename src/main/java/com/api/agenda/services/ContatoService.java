@@ -1,5 +1,7 @@
 package com.api.agenda.services;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,5 +19,15 @@ public class ContatoService {
     @Transactional
     public Contato saveOrUpdate(Contato entity) {
         return repository.save(entity);
+    }
+
+    @Transactional
+    public List<Contato> getAll() {
+        return repository.findAll();
+    }
+
+    @Transactional
+    public Contato update(Contato entity) {
+        return saveOrUpdate(entity);
     }
 }
