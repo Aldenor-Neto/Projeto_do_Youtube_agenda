@@ -30,4 +30,9 @@ public class ContatoService {
     public Contato update(Contato entity) {
         return saveOrUpdate(entity);
     }
+
+    @Transactional
+    public void delete(Long id) {
+        repository.deleteById(id);
+    }
 }
